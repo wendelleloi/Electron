@@ -1,0 +1,108 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Hoteleiros</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, inicial-scale = 1, shrink - to -fit = no">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <!-- window-->
+    <header class="window-bg">
+        <div class="window">
+            <div class="window-logo">
+                <img src="img/logo-250x46.png" alt="Candieiro Digital">
+            </div>
+            <div class="window-nav">
+                <div class="winButton" id="mimButton"><img src="img/min.svg" alt="minimizar"></div>
+                <div class="winButton" id="maxButton"><img src="img/max.svg" alt="maximizar"></div>
+                <div class="winButtonClose" id="closeButton"><img src="img/close.svg" alt="fechar"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="">
+        <!-- navbar-->
+        <nav class="nav theme-blue">
+            <div class="nav-logo">
+                <h4>Sistema Hoteleiros</h4>
+            </div>
+            <div class="nav-option">
+                <div class="user" id="user">
+                    <img src="img/user.svg" alt="usuário">
+                    <ul>
+                        <li><span>Name user</span></li>
+                        <li><span>user</span></li>
+                    </ul>
+                </div>
+
+                <label class="dropdown">
+
+                    <div class="dd-button">
+                        <img src="img/settings.svg" alt="opções">
+                    </div>
+
+                    <input type="checkbox" class="dd-input" id="test">
+
+                    <ul class="dd-menu">
+                        <li>Trocar de usuário</li>
+                        <li>Sair</li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="http://rane.io">Link to Rane.io</a>
+                        </li>
+                    </ul>
+
+                </label>
+
+            </div>
+        </nav>
+
+        <!--dashboard-->
+        <div class='dashboard'>
+            <div class='column'>
+                <div class='drawer'>
+                    <ul>
+                        <li>
+                            <div id="drawerOpener">
+                                <p>dashboard</p>
+                                <img src="img/dash.svg">
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="drawer-item">
+                                <p>Pesquisar quartos</p>
+                                <img src="img/loupe.svg">
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </section>
+    <script src="js/contollerWindow.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function () {
+            $('#drawerOpener').click(function () {
+                $(".drawer").toggleClass("drawer-closed", 'normal');
+                return false;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
